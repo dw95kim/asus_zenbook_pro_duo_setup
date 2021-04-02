@@ -47,6 +47,10 @@ cmake -D WITH_CUDA=ON -D CUDA_ARCH_BIN="6.2" -D CUDA_ARCH_PTX="" -D WITH_GSTREAM
 make -j4
 sudo make install
 
+# 위 과정에서 opencv 경로에 대한 error가 있으면 아래 고려
+opencv cmake 파일에 opencv 경로 변경
+/usr/include/opencv --> /usr/local/include/opencv
+
 ####################################################################################
 
 2. JetPack ROS download
@@ -68,4 +72,3 @@ cd installROS
 git clone https://github.com/jetsonhacks/installRealSenseSDK
 cd installRealSenseSDK
 ./installLibrealsense.sh
-
